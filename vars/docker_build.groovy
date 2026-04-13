@@ -4,6 +4,6 @@ def call(String credsId, String imagename){
         usernameVariable: "dockerHubUser",
         passwordVariable: "dockerHubPass"
     )]){
-        docker build -t ${env.dockerHubUser}/${imagename} .
+        sh "docker build -t ${env.dockerHubUser}/${imagename} ."
     }
 }
